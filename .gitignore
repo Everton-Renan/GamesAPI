@@ -2,3 +2,4 @@ venv/
 informations/
 .env
 project/__pycache__/
+Games_Reviews/__pycache__/
