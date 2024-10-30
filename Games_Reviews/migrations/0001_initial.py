@@ -15,9 +15,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Review',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField()),
                 ('reviews', models.PositiveIntegerField()),
+                ('image', models.ImageField()),
                 ('developer', models.CharField()),
                 ('publisher', models.CharField()),
                 ('series', models.CharField()),
@@ -28,17 +30,21 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Mode',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('mode', models.CharField(max_length=50)),
-                ('review', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='Games_Reviews.review')),
+                ('review', models.ForeignKey(blank=True, null=True,
+                 on_delete=django.db.models.deletion.SET_NULL, to='Games_Reviews.review')),
             ],
         ),
         migrations.CreateModel(
             name='Genre',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('genre', models.CharField(max_length=50)),
-                ('review', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='Games_Reviews.review')),
+                ('review', models.ForeignKey(blank=True, null=True,
+                 on_delete=django.db.models.deletion.SET_NULL, to='Games_Reviews.review')),
             ],
         ),
     ]

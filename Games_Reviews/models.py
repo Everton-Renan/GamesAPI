@@ -4,6 +4,7 @@ from django.db import models
 class Review(models.Model):
     title = models.CharField()
     reviews = models.PositiveIntegerField()
+    image = models.ImageField()
     developer = models.CharField()
     publisher = models.CharField()
     series = models.CharField()
