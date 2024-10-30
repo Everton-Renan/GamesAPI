@@ -3,3 +3,4 @@ informations/
 .env
 project/__pycache__/
 Games_Reviews/__pycache__/
+Games_Reviews/migrations/__pycache__/
