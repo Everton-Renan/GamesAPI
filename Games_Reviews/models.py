@@ -10,6 +10,9 @@ class Review(models.Model):
     platforms = models.CharField()
     release = models.DateField()
 
+    def __str__(self) -> str:
+        return self.title
+
 
 class Genre(models.Model):
     genre = models.CharField(max_length=50)
