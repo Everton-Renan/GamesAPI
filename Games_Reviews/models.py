@@ -14,7 +14,7 @@ class Review(models.Model):
 class Genre(models.Model):
     genre = models.CharField(max_length=50)
     review = models.ForeignKey(
-        Review, on_delete=models.SET_NULL
+        Review, blank=True, null=True, on_delete=models.SET_NULL
     )
 
     def __str__(self) -> str:
@@ -24,7 +24,7 @@ class Genre(models.Model):
 class Mode(models.Model):
     mode = models.CharField(max_length=50)
     review = models.ForeignKey(
-        Review, on_delete=models.SET_NULL
+        Review, blank=True, null=True, on_delete=models.SET_NULL
     )
 
     def __str__(self) -> str:
