@@ -26,6 +26,7 @@ class NewUserAdmin(admin.ModelAdmin):
     fields = [
         'first_name',
         'last_name',
+        'username',
         'email',
         'password',
         'is_staff',
