@@ -16,4 +16,5 @@ class ModeInLine(admin.TabularInline):
 @admin.register(models.Review)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'reviews', 'release', 'publisher')
+    list_display_links = ('id', 'title')
     inlines = GenreInLine, ModeInLine
