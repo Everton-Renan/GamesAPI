@@ -1,0 +1,1 @@
+The application will save the images in this folder.
