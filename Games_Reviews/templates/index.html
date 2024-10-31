@@ -6,6 +6,14 @@
     <title>Games API</title>
 </head>
 <body>
-    
+    <input type="search" name="query" id="query">
+    <input type="submit" value="Search">
+
+    {% for game in games %}
+        <img src="{{ game.image.url }}" alt="Game image">
+        {{ game.title }}
+        <p>{{ game.reviews }} of 5⭐.</p>
+
+    {% endfor %}
 </body>
 </html>
