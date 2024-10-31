@@ -1,4 +1,7 @@
+from django.contrib.auth.models import User
 from django.db import models
+
+from Games_Reviews.utils import generate_api_key
 
 
 class Review(models.Model):
@@ -33,3 +36,7 @@ class Mode(models.Model):
 
     def __str__(self) -> str:
         return self.mode
+
+
+class NewUser(User):
+    key = models.CharField(default=generate_api_key(), editable=False)
