@@ -18,3 +18,22 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'reviews', 'release', 'publisher')
     list_display_links = ('id', 'title')
     inlines = GenreInLine, ModeInLine
+
+
+@admin.register(models.NewUser)
+class NewUserAdmin(admin.ModelAdmin):
+    fields = [
+        'first_name',
+        'last_name',
+        'email',
+        'password',
+        'is_staff',
+        'is_superuser',
+        'is_active',
+        'date_joined',
+        'last_login',
+        'groups',
+        'user_permissions',
+    ]
+    list_display = ('id', 'first_name', 'last_name')
+    list_display_links = ('id', 'first_name', 'last_name')
