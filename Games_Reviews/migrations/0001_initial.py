@@ -25,6 +25,9 @@ class Migration(migrations.Migration):
                 ('series', models.CharField()),
                 ('platforms', models.CharField()),
                 ('release', models.DateField()),
+                ('genre', models.CharField(max_length=50)),
+                ('mode', models.CharField(max_length=50)),
+
             ],
         ),
         migrations.CreateModel(
