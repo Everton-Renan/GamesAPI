@@ -4,7 +4,7 @@ from django.db import models
 class Review(models.Model):
     title = models.CharField()
     reviews = models.PositiveIntegerField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images/%y/%m/')
     developer = models.CharField()
     publisher = models.CharField()
     series = models.CharField()
