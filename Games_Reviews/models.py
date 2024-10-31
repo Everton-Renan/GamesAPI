@@ -39,4 +39,4 @@ class Mode(models.Model):
 
 
 class NewUser(User):
-    key = models.CharField(default=generate_api_key(), editable=False)
+    key = models.CharField(default=generate_api_key, editable=False)
