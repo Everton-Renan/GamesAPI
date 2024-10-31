@@ -22,6 +22,7 @@ class ReviewAdmin(admin.ModelAdmin):
 
 @admin.register(models.NewUser)
 class NewUserAdmin(admin.ModelAdmin):
+    readonly_fields = ('key', )
     fields = [
         'first_name',
         'last_name',
@@ -34,6 +35,7 @@ class NewUserAdmin(admin.ModelAdmin):
         'last_login',
         'groups',
         'user_permissions',
+        'key'
     ]
     list_display = ('id', 'first_name', 'last_name')
     list_display_links = ('id', 'first_name', 'last_name')
