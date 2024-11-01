@@ -4,10 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "css/index/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/single_game/style.css" %}">
     <title>Games API</title>
 </head>
 <body>
-    
+    {% for info in game %}
+        <img src="{{ info.image.url }}" alt="">
+        <h2>{{ info.title }}</h2>
+        <h2>{{ info.reviews }} of 5⭐.</h2>
+        <h2>Developer: {{ info.developer }}</h2>
+        <h2>Publisher: {{ info.publisher }}</h2>
+        <h2>Series: {{ info.series }}</h2>
+        <h2>Platforms: {{ info.platforms }}</h2>
+        <h2>Release: {{ info.release }}</h2>
+        <h2>Genre: {{ info.genre }}</h2>
+        <h2>Mode: {{ info.mode }}</h2>
+
+    {% endfor %}
 </body>
 </html>
