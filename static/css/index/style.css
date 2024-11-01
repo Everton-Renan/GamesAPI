@@ -8,6 +8,10 @@ header {
 
 table {
     background-color: #363636;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+
 }
 
 a,
