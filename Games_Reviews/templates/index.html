@@ -28,11 +28,11 @@
         </tr>
         {% for game in games %}
             <tr>
-                <td><a href="#">{{ game.title }}</a></td>
-                <td><a href="#">{{ game.reviews }} of 5⭐.</a></td>
-                <td><a href="#">{{ game.publisher }}</a></td>
-                <td><a href="#">{{ game.platforms }}</a></td>
-                <td><a href="#">{{ game.release }}</a></td>
+                <td><a href="{% url "Games_Reviews:single_game" game.id %}">{{ game.title }}</a></td>
+                <td><a href="{% url "Games_Reviews:single_game" game.id %}">{{ game.reviews }} of 5⭐.</a></td>
+                <td><a href="{% url "Games_Reviews:single_game" game.id %}">{{ game.publisher }}</a></td>
+                <td><a href="{% url "Games_Reviews:single_game" game.id %}">{{ game.platforms }}</a></td>
+                <td><a href="{% url "Games_Reviews:single_game" game.id %}">{{ game.release }}</a></td>
             </tr>
         {% endfor %}
     </table>
