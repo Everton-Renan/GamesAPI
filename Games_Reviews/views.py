@@ -48,3 +48,11 @@ def home(request: HttpRequest) -> HttpResponse:
         'games': games
     }
     return render(request, 'index.html', context)
+
+
+def single_game(request: HttpRequest, _id: int) -> HttpResponse:
+    game = Review.objects.filter(id=_id)
+    context = {
+        'game': game
+    }
+    return render(request, 'single_game.html', context)
