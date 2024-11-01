@@ -1,0 +1,16 @@
+body {
+    background-color: #1b1c1c;
+}
+
+header {
+    text-align: center;
+}
+
+table {
+    background-color: #363636;
+}
+
+a,
+tr {
+    color: white;
+}
