@@ -14,3 +14,15 @@ img {
     width: 320px;
     height: 370px;
 }
+
+.button {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    border: 10px;
+    font-size: xx-large;
+    background-color: black;
+    color: white;
+}
