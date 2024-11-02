@@ -19,7 +19,10 @@
         <h2>Release: {{ info.release }}</h2>
         <h2>Genre: {{ info.genre }}</h2>
         <h2>Mode: {{ info.mode }}</h2>
-
     {% endfor %}
+    
+    <div class="button">
+        <a href="{% url "Games_Reviews:home" %}">Return</a>
+    </div>
 </body>
 </html>
