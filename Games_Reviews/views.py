@@ -2,14 +2,15 @@ from django.db.models import Q
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from Games_Reviews.models import NewUser, Review
+from Games_Reviews.models import GenerateKeys, Review, User
 
 
 def return_data(request: HttpRequest, username: str, key: str):
     if request.method == 'POST':
         return HttpResponse('POST method is not accepted.')
-    user = NewUser.objects.filter(username=username)
-    if key != user.get().key:
+    user = User.objects.filter(username=username)
+    _key = GenerateKeys.objects.filter(user_id=user.get().pk)
+    if key != _key.get().key:
         return HttpResponse("Key errada.")
     games = Review.objects.all().values(
         'title',
