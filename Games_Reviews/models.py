@@ -20,5 +20,15 @@ class Review(models.Model):
         return self.title
 
 
-class NewUser(User):
-    key = models.CharField(default=generate_api_key, editable=False)
+class GenerateKeys(models.Model):
+    class Meta:
+        verbose_name_plural = 'GenerateKeys'
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    key = models.CharField(default=generate_api_key,
+                           editable=False,
+                           unique=True,
+                           null=False,
+                           blank=False)
+
+    def __str__(self) -> str:
+        return self.user.username
